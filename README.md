@@ -26,9 +26,9 @@ the properties to get the desired result. Other relevant files have also been sh
 
 The file 'Appendix.pdf' has details about the properties discussed for each case study in the paper in (a) natural language, (b) APCTL/APCTL* semantics, and translated (c) PCTL/PCTL* semantics using the logical embeddings. 
 
-Additional files are presented in the subdirectories of each case study for one to view. The event logs are stored in a separate folder, where the old event logs (original),
+Additional files are presented in the subdirectories of each case study for one to view. The event logs are stored in a separate zipped folder with the name 'Event_Logs.zip', where the old event logs (original),
 old event logs (filtered), and the mCRL2 simulations (new event logs) are presented with names of respective case studies. The generated Petri Nets and the Reachability Graphs 
-are also present in the subdirectories with names signifying to whom they belong; their DFS traversals are also saved.
+are also present in the subdirectories with names signifying to whom they belong; their DFS traversals are also saved. The zipped folder can be extracted to view all of them.
 
 In a nutshell, to perform probabilistic model checking of process models, generate the model in ProM, construct the reachability graph of the Petri Net,
 then export the event log and the LTS XES and Petrify SG files, respectively. Then, use either code to construct an ADTMC and subsequently the SDTMC, write down specifications in  APCTL/APCTL*, convert them to PCTL/PCTL*, and finally model check the SDTMC w.r.t. to the PCTL/PCTL* property in PRISM to analyze and insight.
