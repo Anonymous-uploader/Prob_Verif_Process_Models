@@ -1,0 +1,225 @@
+
+ //Fitness of the model:90.0%
+ //Number of bad traces (unique bad traces) in the model:10 (9)
+ //Refer to the file review_small_inductive_point15_ubt.txt to view them.
+
+ dtmc 
+	 module ats_ADTMC 
+
+ //Variables
+s:[0..65] init 10;
+
+ [] s=27 -> 1.0:(s'=29);
+ [] s=11 -> 1.0:(s'=30);
+ [] s=9 -> 0.45:(s'=31)+ 0.35:(s'=18)+ 0.2:(s'=5);
+ [] s=26 -> 0.380952:(s'=32)+ 0.047619:(s'=33)+ 0.238095:(s'=34)+ 0.333333:(s'=35);
+ [] s=8 -> 0.291667:(s'=36)+ 0.708333:(s'=37);
+ [] s=7 -> 1.0:(s'=38);
+ [] s=6 -> 1.0:(s'=39);
+ [] s=24 -> 1.0:(s'=40);
+ [] s=2 -> 0.69697:(s'=41)+ 0.30303:(s'=42);
+ [] s=25 -> 1.0:(s'=43);
+ [] s=12 -> 0.420513:(s'=7)+ 0.215385:(s'=9)+ 0.205128:(s'=25)+ 0.158974:(s'=16);
+ [] s=5 -> 1.0:(s'=44);
+ [] s=14 -> 0.358974:(s'=5)+ 0.641026:(s'=45);
+ [] s=18 -> 1.0:(s'=46);
+ [] s=16 -> 1.0:(s'=20);
+ [] s=19 -> 0.229508:(s'=16)+ 0.221311:(s'=14)+ 0.385246:(s'=11)+ 0.163934:(s'=25);
+ [] s=13 -> 0.636364:(s'=47)+ 0.363636:(s'=48);
+ [] s=21 -> 0.111111:(s'=49)+ 0.122222:(s'=50)+ 0.166667:(s'=51)+ 0.144444:(s'=52)+ 0.311111:(s'=53)+ 0.144444:(s'=54);
+ [] s=22 -> 0.321429:(s'=55)+ 0.142857:(s'=56)+ 0.178571:(s'=57)+ 0.357143:(s'=58);
+ [] s=20 -> 0.433333:(s'=59)+ 0.566667:(s'=60);
+ [] s=10 -> 1.0:(s'=61);
+ [] s=17 -> 0.365854:(s'=62)+ 0.121951:(s'=63)+ 0.292683:(s'=64)+ 0.219512:(s'=65);
+ [] s=29 -> 1.0:(s'=14);
+ [] s=30 -> 1.0:(s'=19);
+ [] s=31 -> 1.0:(s'=12);
+ [] s=32 -> 1.0:(s'=8);
+ [] s=33 -> 1.0:(s'=8);
+ [] s=34 -> 1.0:(s'=2);
+ [] s=35 -> 1.0:(s'=2);
+ [] s=36 -> 1.0:(s'=6);
+ [] s=37 -> 1.0:(s'=6);
+ [] s=38 -> 1.0:(s'=12);
+ [] s=39 -> 1.0:(s'=24);
+ [] s=40 -> 1.0:(s'=27);
+ [] s=41 -> 1.0:(s'=6);
+ [] s=42 -> 1.0:(s'=6);
+ [] s=43 -> 1.0:(s'=12);
+ [] s=44 -> 1.0:(s'=9);
+ [] s=45 -> 1.0:(s'=19);
+ [] s=46 -> 1.0:(s'=9);
+ [] s=47 -> 1.0:(s'=6);
+ [] s=48 -> 1.0:(s'=6);
+ [] s=49 -> 1.0:(s'=26);
+ [] s=50 -> 1.0:(s'=26);
+ [] s=51 -> 1.0:(s'=22);
+ [] s=52 -> 1.0:(s'=22);
+ [] s=53 -> 1.0:(s'=17);
+ [] s=54 -> 1.0:(s'=17);
+ [] s=55 -> 1.0:(s'=13);
+ [] s=56 -> 1.0:(s'=13);
+ [] s=57 -> 1.0:(s'=8);
+ [] s=58 -> 1.0:(s'=8);
+ [] s=59 -> 1.0:(s'=1);
+ [] s=60 -> 1.0:(s'=1);
+ [] s=61 -> 1.0:(s'=21);
+ [] s=62 -> 1.0:(s'=13);
+ [] s=63 -> 1.0:(s'=13);
+ [] s=64 -> 1.0:(s'=2);
+ [] s=65 -> 1.0:(s'=2);
+ [] s=4 -> 1.0:(s'=4);
+ [] s=1 -> 1.0:(s'=1);
+ [] s=3 -> 1.0:(s'=3);
+ [] s=15 -> 1.0:(s'=15);
+ [] s=23 -> 1.0:(s'=23);
+ [] s=0 -> 1.0:(s'=0);
+
+	 endmodule 
+
+ //Labels
+ label "Initial" = (s=10);
+ label "bot"= (s=27)|(s=11)|(s=9)|(s=26)|(s=8)|(s=7)|(s=6)|(s=24)|(s=2)|(s=25)|(s=12)|(s=5)|(s=14)|(s=18)|(s=16)|(s=19)|(s=13)|(s=21)|(s=22)|(s=20)|(s=10)|(s=17)|(s=4)|(s=1)|(s=3)|(s=15)|(s=23)|(s=0);
+ label "getreviewX"= (s=31)|(s=45);
+ label "getreview3"= (s=32)|(s=42)|(s=51)|(s=62);
+ label "timeout3"= (s=33)|(s=41)|(s=52)|(s=63);
+ label "collectreviews"= (s=39);
+ label "timeout2"= (s=34)|(s=37)|(s=54)|(s=56);
+ label "timeoutX"= (s=43)|(s=44);
+ label "getreview2"= (s=35)|(s=36)|(s=53)|(s=55);
+ label "decide"= (s=40);
+ label "inviteadditionalreviewer"= (s=29)|(s=30)|(s=38)|(s=46);
+ label "timeout1"= (s=47)|(s=50)|(s=58)|(s=65);
+ label "getreview1"= (s=48)|(s=49)|(s=57)|(s=64);
+ label "accept"= (s=59);
+ label "reject"= (s=60);
+ label "invitereviewers"= (s=61);
+
+ //Rewards
+ rewards "original_step"
+(s=27)|(s=11)|(s=9)|(s=26)|(s=8)|(s=7)|(s=6)|(s=24)|(s=2)|(s=25)|(s=12)|(s=5)|(s=14)|(s=18)|(s=16)|(s=19)|(s=13)|(s=21)|(s=22)|(s=20)|(s=10)|(s=17)|(s=4)|(s=1)|(s=3)|(s=15)|(s=23)|(s=0): 1;
+ endrewards
+
+ rewards "getreviewX"
+(s=31)|(s=45): 1;
+ endrewards
+
+ rewards "getreview3"
+(s=32)|(s=42)|(s=51)|(s=62): 1;
+ endrewards
+
+ rewards "timeout3"
+(s=33)|(s=41)|(s=52)|(s=63): 1;
+ endrewards
+
+ rewards "collectreviews"
+(s=39): 1;
+ endrewards
+
+ rewards "timeout2"
+(s=34)|(s=37)|(s=54)|(s=56): 1;
+ endrewards
+
+ rewards "timeoutX"
+(s=43)|(s=44): 1;
+ endrewards
+
+ rewards "getreview2"
+(s=35)|(s=36)|(s=53)|(s=55): 1;
+ endrewards
+
+ rewards "decide"
+(s=40): 1;
+ endrewards
+
+ rewards "inviteadditionalreviewer"
+(s=29)|(s=30)|(s=38)|(s=46): 1;
+ endrewards
+
+ rewards "timeout1"
+(s=47)|(s=50)|(s=58)|(s=65): 1;
+ endrewards
+
+ rewards "getreview1"
+(s=48)|(s=49)|(s=57)|(s=64): 1;
+ endrewards
+
+ rewards "accept"
+(s=59): 1;
+ endrewards
+
+ rewards "reject"
+(s=60): 1;
+ endrewards
+
+ rewards "invitereviewers"
+(s=61): 1;
+ endrewards
+
+
+ //State Mapping
+ // s27 -> s27
+ // inviteadditionalreviewer.s14 -> s29
+ // s11 -> s11
+ // inviteadditionalreviewer.s19 -> s30
+ // s9 -> s9
+ // getreviewX.s12 -> s31
+ // s26 -> s26
+ // getreview3.s8 -> s32
+ // timeout3.s8 -> s33
+ // timeout2.s2 -> s34
+ // getreview2.s2 -> s35
+ // s8 -> s8
+ // getreview2.s6 -> s36
+ // timeout2.s6 -> s37
+ // s7 -> s7
+ // inviteadditionalreviewer.s12 -> s38
+ // s6 -> s6
+ // collectreviews.s24 -> s39
+ // s24 -> s24
+ // decide.s27 -> s40
+ // s2 -> s2
+ // timeout3.s6 -> s41
+ // getreview3.s6 -> s42
+ // s25 -> s25
+ // timeoutX.s12 -> s43
+ // s12 -> s12
+ // s5 -> s5
+ // timeoutX.s9 -> s44
+ // s14 -> s14
+ // getreviewX.s19 -> s45
+ // s18 -> s18
+ // inviteadditionalreviewer.s9 -> s46
+ // s16 -> s16
+ // s19 -> s19
+ // s13 -> s13
+ // timeout1.s6 -> s47
+ // getreview1.s6 -> s48
+ // s21 -> s21
+ // getreview1.s26 -> s49
+ // timeout1.s26 -> s50
+ // getreview3.s22 -> s51
+ // timeout3.s22 -> s52
+ // getreview2.s17 -> s53
+ // timeout2.s17 -> s54
+ // s22 -> s22
+ // getreview2.s13 -> s55
+ // timeout2.s13 -> s56
+ // getreview1.s8 -> s57
+ // timeout1.s8 -> s58
+ // s20 -> s20
+ // accept.s1 -> s59
+ // reject.s1 -> s60
+ // s10 -> s10
+ // invitereviewers.s21 -> s61
+ // s17 -> s17
+ // getreview3.s13 -> s62
+ // timeout3.s13 -> s63
+ // getreview1.s2 -> s64
+ // timeout1.s2 -> s65
+ // s4 -> s4
+ // s1 -> s1
+ // s3 -> s3
+ // s15 -> s15
+ // s23 -> s23
+ // s0 -> s0

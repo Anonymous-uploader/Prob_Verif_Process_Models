@@ -1,0 +1,22 @@
+
+ Total Traces in the file:	100
+ Number of Good Traces in the file:	90
+ Number of Bad Traces in the file:	10
+ Number of Unique Bad Trace Types in the file:	9
+
+ Fitness of Model w.r.t. traces it can simulate:	90.0% 
+
+
+ Sl No. 	 Bad trace 	 Frequency
+
+1. invitereviewers->getreview2->getreview3->getreview1->collectreviews->decide->accept	1
+2. invitereviewers->getreview2->getreview1->getreview3->collectreviews->decide->accept	2
+3. invitereviewers->getreview1->getreview3->getreview2->collectreviews->decide->reject	1
+4. invitereviewers->getreview3->getreview2->getreview1->collectreviews->decide->accept	1
+5. invitereviewers->getreview1->getreview3->timeout2->collectreviews->decide->reject	1
+6. invitereviewers->getreview1->getreview3->timeout2->collectreviews->decide->accept	1
+7. invitereviewers->getreview1->timeout2->getreview3->collectreviews->decide->accept	1
+8. invitereviewers->getreview1->timeout2->getreview3->collectreviews->decide->reject	1
+9. invitereviewers->getreview3->timeout2->getreview1->collectreviews->decide->reject	1
+
+ Total Number of Unsimulated Traces:	0
